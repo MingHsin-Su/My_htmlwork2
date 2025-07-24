@@ -1,0 +1,102 @@
+nav {
+  background-color: #009393;      /* 設定背景色為深灰色 */
+  padding: 10px 20px;          /* 上下 10px，左右 20px 的內距 */
+  
+}
+
+/* 導覽列中的 ul（選單列表） */
+nav ul {
+  list-style-type: none;       /* 移除預設的項目符號（•） */
+  margin: 0;                   /* 移除預設的外距 */
+  padding: 0;                  /* 移除預設的內距 */
+  display: flex;               /* 使用 flex 排版讓選單橫向排列 */
+   margin: auto;
+}
+nav li {
+  margin-right: 20px;          /* 每個選單項目之間右側間距 20px */
+}
+nav a {
+  text-decoration: none;       /* 移除連結的底線 */
+  color: white;                /* 文字顏色為白色 */
+  font-weight: bold;           /* 設定字體為粗體 */
+  padding: 6px 12px;           /* 上下 6px、左右 12px 的內距，讓按鈕更大 */
+  transition: background-color 0.3s; /* 背景顏色變化加上 0.3 秒動畫過渡 */
+}
+/* 滑鼠移到超連結時的樣式 */
+nav a:hover {
+  background-color: #555;      /* 滑鼠移過時，背景變為較亮的灰色 */
+  border-radius: 4px;          /* 加上 4px 的圓角邊框 */
+}
+
+
+  
+  .txtcolor{
+    color: green;
+	font-size: 20px;
+	text-align: center;
+  
+   }
+   .btn{
+   background-color:green;
+   color:white;
+   padding:10px;
+   border-radius:5px;
+   border: none;
+   cursor:pointer; /* 滑鼠移到按鈕時的變化 */
+   }
+   
+   .btn:hover{
+     background-color:#45a049;
+   }
+   
+   .danger{
+    background-color:red;
+   }
+   
+   .pink-btn {
+	  background-color: pink;
+	  color: white;
+	  padding: 10px 87px;
+	  border: none;
+	}
+
+	.pink-btn:hover {
+	  background-color: #45a049;
+	}
+
+   
+   #myheader{
+     color: gray;
+     font-size: 20px;
+	 background-color: lightblue;
+	 padding: 10px;
+	 text-align:center;
+   
+   }
+   .txtblue{
+      color:blue;
+   }
+   
+   h1{
+     color:pink;
+	 font-family:標楷體,新細明體,serif;
+	 font-weight:bold;
+	 
+   }
+   h2{
+	color: #0000CC;
+	font-family: 標楷體,serif;
+	font-weight: bold;
+	border: 3px #669900 double;
+	}
+
+	h3{
+		border: 3px orange  dotted;
+	}
+
+	h4{
+		border: 3px orange  dashed;
+		text-align:center;
+	}
+   
+   
