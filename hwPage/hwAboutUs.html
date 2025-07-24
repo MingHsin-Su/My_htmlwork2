@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ABU</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/hwindex.css">
+		
+		  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+		  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+ <body class="bodybg">
+  <div class="container">
+    <div class="row">  <!-- 使用 Bootstrap 的 Row -->
+      <div class="col-md-6">  <!-- 文字區域，佔用 6 欄 (一半螢幕) -->
+        
+        <h3 style="margin-top:80px;">Vintage 優質二手選物</h3>
+        <pre>
+          在家逛的藝術選品店
+
+          立即選購屬於你的風格
+        </pre>
+		<h1>Happy Shop</h1>
+      </div>
+      <div class="col-md-6">  <!-- 圖片輪播區域，佔用 6 欄 (一半螢幕) -->
+        <div id="demo" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+          <!-- The slideshow -->
+          <div class="carousel-inner" >
+            <div class="carousel-item active" style="margin-top:30px;">
+              <img src="image\pic_5.jpg" alt="pic_5" width="200%" height="300"> <!-- 圖片寬度100%，高度300 -->
+            </div>
+            <div class="carousel-item">
+               <img src="image\pic_3.jpg" alt="pic_3" width="200%" height="300">  <!-- 圖片寬度100%，高度300 -->
+            </div>
+            <div class="carousel-item">
+               <img src="image\pic_4.jpg" alt="pic_4"  width="200%" height="300">  <!-- 圖片寬度100%，高度300 -->
+            </div>
+          </div>
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+ </body>
+  </html>
