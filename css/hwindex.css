@@ -1,0 +1,589 @@
+/*hwindex.html*//* 整個導覽列容器 */
+/* 整個導覽列容器 */
+nav {
+  background-color: #E1C4C4; /* 導覽列背景色：藍綠色 */
+  padding: 10px 20px; /* 導覽列上下10px、左右20px內距 */
+  display: flex; /* 使用 flex 將 logo 與選單排成橫向兩欄 */
+  justify-content: space-between; /* 兩邊分散排列，logo靠左，選單靠右 */
+  align-items: center; /* 垂直置中對齊 */
+}
+
+/* 網站標題樣式 */
+nav .logo {
+  color: white; /* 文字顏色為白色 */
+  font-size: 24px; /* 字體大小為 24px */
+  font-weight: bold; /* 使用粗體 */
+  margin-right: 40px; /* 與右側選單保留空間 */
+  font-family: Sans-serif;
+}
+
+/* 導覽列的列表設定 */
+nav ul {
+  list-style-type: none; /* 移除項目符號（點點） */
+  margin: 0; /* 移除外距 */
+  padding: 0; /* 移除內距 */
+  display: flex; /* 將選單橫向排列 */
+  justify-content: flex-end; /* 將選單靠右排列 */
+  letter-spacing: 2px; /* 字與字間距 */
+  align-items: center; /* 垂直置中選單項目 */ /* 新增 */
+}
+
+/* 每一個選單項目的間距 */
+nav li {
+  margin-right: 20px; /* 每個選單右邊間隔 20px */
+  font-size: 12px;
+}
+
+/* 超連結樣式 */
+nav a {
+  text-decoration: none; /* 移除底線 */
+  color: white; /* 白色文字 */
+  font-weight: bold; /* 粗體字 */
+  padding: 6px 12px; /* 增加點擊區域的內距 */
+  transition: background-color 0.3s; /* 滑鼠移過背景變化動畫 0.3秒 */
+  border-radius: 5px; /* 增加圓角 */ /* 新增 */
+}
+
+/* 滑鼠移過連結時效果 */
+nav a:hover {
+  background-color: #555; /* 背景變成灰色 */
+  border-radius: 4px; /* 圓角 4px */
+}
+
+/* 搜尋框樣式 */
+nav form { /* 新增 */
+    display: flex; /* 讓搜尋框內的元素水平排列 */
+    margin-left: 20px; /* 增加與左側選單的間距 */
+}
+
+nav .form-control { /* 新增 */
+    border-radius: 5px; /* 圓角 */
+    border: 1px solid #ccc; /* 淺灰色邊框 */
+    padding: 6px 12px; /* 內距 */
+    font-size: 12px; /* 字體大小 */
+}
+
+nav .btn-outline-success { /* 新增 */
+    background-color:rgba(128, 0, 0, 0.5); /* 綠色背景 */
+    color: white; /* 白色文字 */
+    border: none; /* 移除邊框 */
+    border-radius: 5px; /* 圓角 */
+    padding: 4px 6px; /* 內距 */
+    margin-left: 5px; /* 搜尋按鈕與輸入框之間的間距 */
+}
+
+nav .btn-outline-success i { /* 新增 */
+    margin-left: 5px; /* 搜尋按鈕圖標與文字之間的間距 */
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+table td {
+  padding: 0; /* 移除 <td> 的內邊距 */
+}
+
+.item-img {
+  width: 100%; /* 圖片寬度填滿 <td> */
+  height: 100%; /* 圖片高度填滿 <td> */
+  object-fit: cover; /* 保持圖片比例，並裁剪多餘部分 */
+  display: block; /*  確保圖片是塊級元素  */
+}
+
+
+/*hwAboutUs.html*/
+ /* 網頁整體設定 */
+  
+
+    /* 主要內容容器 */
+    .container {
+      text-align: center;
+      padding-top: 3px; /* 從頂部向下移動內容，增加視覺效果 */
+      
+	}
+
+    /* 標題樣式 */
+    h1 {
+      font-size: 5em; /* 字體大小 */
+       color: rgba(128, 0, 0, 0.5); /* 主要顏色，加上 80% 透明度 */
+      margin-bottom: -4em; /* 底部間距 */
+	  margin-left: -1em;
+      
+	}
+
+    /* 副標題樣式 */
+    h3 {
+      font-size: 1.5em; /* 字體大小 */
+      color: #555; /* 較淺的顏色 */
+	  margin-top:30px;
+      
+    }
+
+    /* 描述文字樣式 */
+    pre {
+      font-size:0.8em; /* 字體大小 */
+      line-height: 1.6; /* 行高 */
+      color: #444; /* 較深的顏色 */
+      background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+      padding: 22px 100px; /* 內距 */
+	  margin-top:20px;
+      border-radius: 10px; /* 圓角 */
+      display: inline-block; /* 只佔據內容的寬度 */
+      text-align: right; /* 恢復文字左對齊 */
+    }
+	
+	
+
+/*hwProdect.html*/
+
+/* 網頁整體設定 */
+body{
+	background-color: #eeacac26;
+}
+ 
+.bodybg {
+
+ background-image: url("../hwPage/image/images.jpg"); /* 設定背景圖片 */
+ background-repeat: repeat;
+ background-size: auto;             
+  font-family: "Microsoft JhengHei", sans-serif; /* 使用微軟正黑體或無襯線字型 */
+  text-align: center;                          /* 文字置中 */
+  margin:0;
+   letter-spacing: 2px;          /* 字與字間距 */
+   
+}
+
+/* 商品表格統一外觀風格 */
+.product-table {
+  border-collapse: collapse; /* 合併表格邊框 */
+  background-color: rgba(240, 240, 240, 0.9);  /* 表格背景：淡粉紅且略透明 */
+  border-radius: 15px;                         /* 邊角圓角化 */
+  margin: 0px auto;                           /* 上下外距 40px，水平置中 */
+  padding: 20px;                               /* 內邊距 20px */
+  width: 80%;                                  /* 寬度為整體的 80% */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);    /* 加上陰影效果 */
+  border-collapse: collapse;                   /* 合併邊框，避免雙線 */*/
+  
+}
+
+/* 商品表格標題欄位 */
+.product-table th {
+  font-size: 15px;     /* 標題字體大小 */
+  padding: 5px;       /* 內邊距 */
+  color: #333;         /* 深灰色文字 */
+  
+}
+
+/* 商品表格的每個欄位 */
+.product-table td {
+  padding: 10px;       /* 單元格內邊距 */
+  font-size: 13px;     /* 一般欄位字體大小 */
+  border: 2px solid 	#FFFFFF; /* 線寬2px、顏色灰色 */
+}
+
+/* 商品圖片設定 */
+.product-table img {
+  border-radius: 10px;                             /* 圖片四角圓角 */
+  transition: transform 0.3s ease;                 /* 滑鼠移入圖片動畫效果 */
+}
+input[type="number"] {
+  width: 43px;     /* 輸入欄的寬度 */
+  height: 19px;    /* 輸入欄的高度 */
+  border: 1px solid #999;      /* 邊框顏色與粗細 */
+  border-radius: 8px;          /* 圓角半徑，可依喜好調整 */
+  padding: 4px 8px;            /* 內距，讓內容不貼邊 */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);  /* 外陰影，有立體感 */
+}
+
+/* 滑鼠移到商品圖片時放大 */
+.product-table img:hover {
+  transform: scale(1.1);                           /* 圖片放大 10% */
+}
+
+/* 統一的按鈕樣式 */
+/* 統一的按鈕樣式 */
+.btn {
+  background-color:#800000;  /* 淺粉紅色背景，符合表頭風格 */
+  color: white;               /* 白色字體 */
+  border: none;               /* 移除邊框 */
+  padding: 6px 12px;          /* 內距：上下 6px，左右 12px */
+  border-radius: 5px;         /* 邊角圓弧 */
+  cursor: pointer;            /* 滑鼠移上時顯示手指圖示 */
+  display: inline-block; /* 使按鈕可以設定 margin */
+  text-decoration: none; /* 移除超連結的底線 */
+}
+
+.btn-container {  /* 如果你需要一個容器來包住按鈕，方便定位的話 */
+ 
+  margin-bottom: 100px; /* 距離底部 20px */
+  right: 104px; /* 距離右邊 20px */
+}
+
+.btn:first-child {
+  margin-right: 10px; /* 加入購物車按鈕和結帳按鈕之間的間距 */
+}
+
+.btn i {
+  margin-left: 5px; /* 圖標與文字之間的間距 */
+  font-size: 1.2em; /* 圖標大小 */
+}
+
+/* 跑馬燈（marquee）樣式 */
+.marquee {
+  font-size: 12px;                                 /* 字體大小 */
+  font-weight: bold;                               /* 粗體字 */
+  color: #800000;                                  /* 暗紅色字體 */
+  background-color: rgba(255, 255, 255, 0.6);      /* 半透明白底 */
+  padding: 0;                                   /* 內邊距 */
+  margin-top: 5px;                                /* 上外距 */
+}
+
+/*hwMember.html*/	   /* 外層表單容器的樣式 */
+.register-form {
+  background-color: rgba(255, 255, 255, 0.85); /* 半透明白色背景，讓背景圖能微透出 */
+  border-radius: 10px;                        /* 邊角圓弧，讓區塊更柔和 */
+  padding: 20px 20px;                         /* 內距，讓內容不緊貼邊緣 */
+  width: 300px;                               /* 固定寬度 */
+  margin: 40px auto;                          /* 垂直外距 40px，水平置中 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);   /* 陰影效果，提升立體感 */
+  font-family: "Microsoft JhengHei", sans-serif; /* 使用微軟正黑體，適合中文顯示 */
+}
+
+/* 表單標題文字 */
+.register-form h3 {
+  text-align: center;       /* 置中對齊 */
+  color: #333;              /* 深灰色字體，柔和又清晰 */
+  margin-bottom: 20px;      /* 下方留空間 */
+  font-weight: bold;        /* 加粗字體 */
+}
+
+/* 每一格表格欄位的樣式 */
+.register-form td {
+  padding: 8px 2px;         /* 上下 8px、左右 5px 的內距 */
+  font-size: 15px;          /* 字體大小 */
+  color: #333;              /* 字體顏色 */
+}
+
+/* 所有文字輸入欄位的樣式 */
+.register-form input[type="text"],
+.register-form input[type="tel"],
+.register-form input[type="email"]
+
+ {
+  width: 100%;              /* 滿寬 */
+  padding: 5px;             /* 內距 */
+  border: 1px solid #bbb;   /* 淺灰色邊框 */
+  border-radius: 4px;       /* 邊角圓弧 */
+}
+
+/* 性別選項的單選按鈕 */
+.register-form input[type="radio"] {
+  margin-left: 10px;        /* 與前方文字間距 */
+  margin-right: 5px;        /* 與後方文字間距 */
+}
+
+/* 提交按鈕樣式 */
+.register-form input[type="submit"] {
+  background-color: #c99fa0;  /* 淺粉紅色背景，符合表頭風格 */
+  color: white;               /* 白色字體 */
+  border: none;               /* 移除邊框 */
+  padding: 6px 12px;          /* 內距：上下 6px，左右 12px */
+  border-radius: 5px;         /* 邊角圓弧 */
+  cursor: pointer;            /* 滑鼠移上時顯示手指圖示 */
+}
+
+/* 提交按鈕 hover 效果（滑鼠移上去） */
+.register-form input[type="submit"]:hover {
+  background-color: #b0898a;  /* 稍微加深一點的粉色 */
+}
+
+/* 忘記密碼的連結樣式 */
+.register-form a {
+  text-decoration: none;    /* 取消底線 */
+  color: #663366;           /* 紫紅色字體 */
+  font-size: 14px;          /* 字體大小 */
+  margin-left: 10px;        /* 與按鈕保持一點距離 */
+}
+
+/* 滑鼠移上忘記密碼的連結時加上底線 */
+.register-form a:hover {
+  text-decoration: underline;
+}
+
+/*hwMedia.html*/
+
+.video-table {
+  
+  background-color: rgba(255, 240, 245, 0.9); /* 淡粉白半透明背景 */
+  border-radius: 10px;                       /* 圓角 */
+  padding: 20px;                              /* 內距 */
+  margin: 40px auto;                          /* 垂直間距 + 水平置中 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* 陰影效果 */
+  font-family: "Microsoft JhengHei", sans-serif; /* 微軟正黑體 */
+  border-collapse: collapse;                 /* 合併邊框 */
+  text-align: center;                        /* 表格內容置中 */
+}
+
+.video-table td {
+  padding: 50px;      /* 單元格內距 */
+}
+
+.video-table iframe {
+  border-radius: 8px; /* 影片也帶點圓角 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 影片也有微陰影 */
+}
+/*hwshopcar.html*/
+
+ /* 網頁整體設定 */
+ html, body {
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+        .bodybg {
+            background-image: url("../hwPage/image/images.jpg"); /* 設定背景圖片 */
+            background-repeat: repeat;
+            background-size: auto;
+            font-family: "Microsoft JhengHei", sans-serif; /* 使用微軟正黑體或無襯線字型 */
+            text-align: center;                          /* 文字置中 */
+            margin:0;
+            letter-spacing: 2px;          /* 字與字間距 */
+        }
+
+        /* 商品表格統一外觀風格 */
+        .product-table {
+            background-color: rgba(240, 240, 240, 0.9);  /* 表格背景：淡粉紅且略透明 */
+            border-radius: 15px;                         /* 邊角圓角化 */
+            margin: 0px auto;                           /* 上下外距 40px，水平置中 */
+            padding: 20px;                               /* 內邊距 20px */
+            width: 80%;                                  /* 寬度為整體的 80% */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);    /* 加上陰影效果 */
+            border-collapse: collapse;                   /* 合併邊框，避免雙線 */
+        }
+
+        /* 商品表格標題欄位 */
+        .product-table th {
+            font-size: 15px;     /* 標題字體大小 */
+            padding: 5px;       /* 內邊距 */
+            color: #333;         /* 深灰色文字 */
+
+        }
+
+        /* 商品表格的每個欄位 */
+        .product-table td {
+            padding: 10px;       /* 單元格內邊距 */
+            font-size: 13px;     /* 一般欄位字體大小 */
+            border: 2px solid 	#FFFFFF; /* 線寬2px、顏色灰色 */
+        }
+
+        /* 商品圖片設定 */
+        .product-table img {
+            border-radius: 10px;                             /* 圖片四角圓角 */
+            transition: transform 0.3s ease;                 /* 滑鼠移入圖片動畫效果 */
+        }
+        input[type="number"] {
+            width: 43px;     /* 輸入欄的寬度 */
+            height: 19px;    /* 輸入欄的高度 */
+            border: 1px solid #999;      /* 邊框顏色與粗細 */
+            border-radius: 8px;          /* 圓角半徑，可依喜好調整 */
+            padding: 4px 8px;            /* 內距，讓內容不貼邊 */
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);  /* 外陰影，有立體感 */
+        }
+
+        /* 滑鼠移到商品圖片時放大 */
+        .product-table img:hover {
+            transform: scale(1.1);                           /* 圖片放大 10% */
+        }
+
+        /* 統一的按鈕樣式 */
+        .btn {
+            background-color:#800000;  /* 淺粉紅色背景，符合表頭風格 */
+            color: white;               /* 白色字體 */
+            border: none;               /* 移除邊框 */
+            padding: 6px 12px;          /* 內距：上下 6px，左右 12px */
+            border-radius: 5px;         /* 邊角圓弧 */
+            cursor: pointer;            /* 滑鼠移上時顯示手指圖示 */
+            display: inline-block; /* 使按鈕可以設定 margin */
+            text-decoration: none; /* 移除超連結的底線 */
+        }
+
+        .btn-container {  /* 如果你需要一個容器來包住按鈕，方便定位的話 */
+           
+            bottom: 83px; /* 距離底部 20px */
+            right: 104px; /* 距離右邊 20px */
+        }
+
+        .btn:first-child {
+            margin-right: 10px; /* 加入購物車按鈕和結帳按鈕之間的間距 */
+        }
+
+
+        /* 跑馬燈（marquee）樣式 */
+        .marquee {
+            font-size: 12px;                                 /* 字體大小 */
+            font-weight: bold;                               /* 粗體字 */
+            color: #800000;                                  /* 暗紅色字體 */
+            background-color: rgba(255, 255, 255, 0.6);      /* 半透明白底 */
+            padding: 0;                                   /* 內邊距 */
+            margin-top: 5px;                                /* 上外距 */
+        }
+/*hwContactUs.html*/
+/* 網頁整體設定 */
+   
+    /* 表單容器 */
+    .contact-form {
+      background-color: rgba(240, 240, 240, 0.9);  /* 表單背景：淡粉紅且略透明 */
+      border-radius: 15px;                         /* 邊角圓角化 */
+      margin: 40px auto;                           /* 上下外距 40px，水平置中 */
+      padding: 20px;                               /* 內邊距 20px */
+      width: 80%;                                  /* 寬度為整體的 80% */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);    /* 加上陰影效果 */
+      border-collapse: collapse;                   /* 合併邊框，避免雙線 */
+      display: flex; /* 使用 flexbox 佈局 */
+      justify-content: space-between; /* 水平置中，並在兩側留白 */
+      align-items: flex-start; /* 垂直對齊頂部 */
+    }
+
+    /* 表單標題 */
+    h3 {
+      color: #333;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    /* 表格單元格 (表單欄位) */
+    .contact-form td {
+      padding: 8px 5px; /* 調整單元格內距 */
+      font-size: 15px;
+      color: #333;
+      text-align: left; /* 將文字靠左對齊 */
+    }
+
+    /* 輸入框和文字區域 */
+    .contact-form input[type="text"],
+    .contact-form input[type="tel"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 80%; /* 讓輸入框填滿單元格 */
+      padding: 5px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      margin-bottom: 10px; /* 增加輸入框之間的間距 */
+      box-sizing: border-box; /* 確保 padding 不會增加元素的寬度 */
+    }
+
+  /* 提交按鈕樣式 */
+    .contact-form input[type="submit"] {
+      background-color: #800000; /* 按鈕背景色 */
+      color: white;               /* 白色字體 */
+      border: none;               /* 移除邊框 */
+      padding: 6px 12px;          /* 內距：上下 6px，左右 12px */
+      border-radius: 5px;         /* 邊角圓弧 */
+      cursor: pointer;            /* 滑鼠移上時顯示手指圖示 */
+      text-decoration: none; /* 移除超連結的底線 */
+      display: block; /* 使按鈕可以設定 margin */
+      margin-left: 230px; /* 將按鈕推到右側 */
+    }
+
+    /* 提交按鈕 hover 效果 */
+    .contact-form input[type="submit"]:hover {
+      background-color: #e18aa0; /* 滑鼠移上時變更顏色 */
+    }
+
+    /* 地圖 iframe 樣式 */
+    .contact-form iframe {
+      border-radius: 10px; /* 圓角 */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+    }
+
+    /* 新增地圖容器的樣式 */
+    .map-container {
+		width: 500px; /* 地圖的寬度 */
+    }
+	
+	.carousel-container {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		margin-top:50px;
+}
+  .carousel-inner img {
+    width: 100%; /* 圖片寬度填滿 <td> */
+    height: 300px; /* 設定輪播圖片高度 */
+	object-fit: cover;
+	margin-top:60px;
+  }
+
+table td {
+  padding: 0; /* 移除 <td> 的內邊距 */
+  margin-top:10px;
+}
+iframe{
+    height: 100%;
+}
+
+.item-img {
+  width: 100%; /* 圖片寬度填滿 <td> */
+  height: 100%; /* 圖片高度填滿 <td> */
+  object-fit: cover; /* 保持圖片比例，並裁剪多餘部分 */
+  display: block; /*  確保圖片是塊級元素  */
+}
+
+footer {
+    background-color: #dcdbd8;
+    padding: 20px 0; /* 移除水平 padding，讓 container 處理 */
+    font-size: 12px; /* 字體大小，與 body 相同 */
+    line-height: 0.8;; /* 行高，與 body 相同 */
+}
+
+.contact-info {
+   
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1em;
+	padding-left: 130px;  /* 保留原有的 padding-left */
+}
+.contact-info p {
+    margin: 0.5em 0;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.contact-info i {
+    margin-right: 0.5em;
+    color: #333;
+}
+
+.social-icons {
+   display: flex;
+   justify-content: flex-start; /* 讓社交圖示靠左 */
+   margin-top: 1em;
+   padding-right: 30px;
+}
+
+.social-icons i {
+    margin-right: 0.5em;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.copyright-container {
+    display: flex;
+    align-items: center; /* 垂直置中 */
+    justify-content: flex-end; /* 版權資訊靠右 */
+    height: 100%; /* 確保高度與左側聯絡資訊相同 */
+}
+
+.copyright {
+    text-align: right; /* 版權資訊文字靠右 */
+    padding-right: 100px; /* 與右邊界之間增加一些間距 */
+}
