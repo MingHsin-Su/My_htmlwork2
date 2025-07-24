@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品列表（單列排版）</title>
+  <link rel="stylesheet" type="text/css" href="D:\htmlclass\css\hwindex.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    function addToCart(itemName, itemImageSrc, itemPrice, quantity) {
+      if (!itemImageSrc) return;
+	  console.log("加入圖片：", itemImageSrc);
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingItemIndex = cart.findIndex(item => item.name === itemName);
+      if (existingItemIndex !== -1) {
+        if (parseInt(quantity) > 0) {
+          cart[existingItemIndex].quantity += parseInt(quantity);
+        } else {
+          cart.splice(existingItemIndex, 1);
+        }
+      } else if (parseInt(quantity) > 0) {
+        cart.push({ name: itemName, imageSrc: itemImageSrc, price: itemPrice, quantity: parseInt(quantity) });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${itemName} 已加入購物車!`);
+    }
+
+   function updateQuantity(inputElement) {
+  const row = inputElement.closest('tr');
+  const itemName = row.querySelector('td:nth-child(1)').textContent.trim();
+  const itemImageSrc = row.querySelector('td:nth-child(2) img')?.src || null;
+  const itemPrice = parseInt(row.querySelector('td:nth-child(3) font')?.textContent.replace(/[^0-9]/g, '') || '0');
+  const quantity = parseInt(inputElement.value);
+  addToCart(itemName, itemImageSrc, itemPrice, quantity);
+}
+
+  </script>
+</head>
+<body class="bodybg">
+  <center>
+    <marquee class="marquee" loop="3" direction="right" scrollamount="3">限時優惠：滿10000元免運費</marquee>
+     <h2 style="margin-top: 10px; color: #800000;">商品列表</h2>
+    <table class="product-table" border="4" bordercolor="#DDDDDD" width="80%">
+      <thead>
+	  
+        <tr align="center" bgcolor="#EBD6D6">
+          <th>品名</th>
+          <th>圖片</th>
+          <th>價格</th>
+          <th>數量</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr align="center" bgcolor="#FFF0F5">
+          <td>男戒指</td>
+          <td><img src="image\p1.png" width="100" height="100"></td>
+          <td><del>$5000</del><br><font color="red">$3000</font></td>
+          <td><input type="number" min="0" max="5" value="0" onchange="updateQuantity(this)"></td>
+        </tr>
+        <tr align="center" bgcolor="#FFF0F5">
+          <td>防水手錶</td>
+          <td><img src="image\p2.png" width="100" height="100"></td>
+          <td><del>$8000</del><br><font color="red">$5000</font></td>
+          <td><input type="number" min="0" max="5" value="0" onchange="updateQuantity(this)"></td>
+        </tr>
+        <tr align="center" bgcolor="#FFF0F5">
+          <td>小熊玩偶</td>
+          <td><img src="image/p3.png" width="100" height="100"></td>
+          <td><del>$1000</del><br><font color="red">$500</font></td>
+          <td><input type="number" min="0" max="5" value="0" onchange="updateQuantity(this)"></td>
+        </tr>
+        <tr align="center" bgcolor="#FFF0F5">
+          <td>花束1</td>
+          <td><img src="image/p4.png" width="100" height="100"></td>
+          <td><del>$2000</del><br><font color="red">$1000</font></td>
+          <td><input type="number" min="0" max="5" value="0" onchange="updateQuantity(this)"></td>
+        </tr>
+        <tr align="center" bgcolor="#FFF0F5">
+          <td>大熊玩偶</td>
+          <td><img src="image/p5.png" width="100" height="100"></td>
+          <td><del>$1200</del><br><font color="red">$800</font></td>
+          <td><input type="number" min="0" max="5" value="0" onchange="updateQuantity(this)"></td>
+        </tr>
+        <tr align="center" bgcolor="#FFF0F5">
+          <td>花束2</td>
+          <td><img src="image/p6.png" width="100" height="100"></td>
+          <td><del>$800</del><br><font color="red">$500</font></td>
+          <td><input type="number" min="0" max="5" value="0" onchange="updateQuantity(this)"></td>
+        </tr>
+        <tr align="center" bgcolor="#FFF0F5">
+          <td>手錶</td>
+          <td><img src="image/p7.png" width="100" height="100"></td>
+          <td><del>$5000</del><br><font color="red">$3000</font></td>
+          <td><input type="number" min="0" max="5" value="0" onchange="updateQuantity(this)"></td>
+        </tr>
+        <tr align="center" bgcolor="#FFF0F5">
+          <td>女戒指</td>
+          <td><img src="image/p8.png" width="100" height="100"></td>
+          <td><del>$4000</del><br><font color="red">$2000</font></td>
+          <td><input type="number" min="0" max="5" value="0" onchange="updateQuantity(this)"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="btn-container">
+      <a href="hwShopcar.html"><button class="btn">加入購物車 <i class="fa-solid fa-cart-shopping"></i></button></a>
+      <a href="hwShopcar.html"><button class="btn">結帳</button></a>
+    </div>
+  </center>
+</body>
+</html>

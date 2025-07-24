@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>購物車列表</title>
+  <link rel="stylesheet" type="text/css" href="../css/hwindex.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 格式化金額，例如 $3,000
+      function formatCurrency(amount) {
+        return '$' + amount.toLocaleString('en-US');
+      }
+
+      // 獲取購物車資訊
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // 獲取表格元素
+      const table = document.querySelector('.product-table');
+      if (!table) {
+        console.error('找不到 product-table 元素');
+        return;
+      }
+
+      // 獲取或建立 tbody
+      let tbody = table.querySelector('tbody');
+      if (!tbody) {
+        tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+      } else {
+        tbody.innerHTML = '';
+      }
+
+      // 建立表頭
+      const headerRow = document.createElement('tr');
+      headerRow.setAttribute('bgcolor', '#EBD6D6');
+      headerRow.setAttribute('align', 'center');
+
+      const headers = ['品項', '圖片', '數量', '單價', '小計'];
+      headers.forEach(text => {
+        const th = document.createElement('th');
+        th.textContent = text;
+        headerRow.appendChild(th);
+      });
+      tbody.appendChild(headerRow);
+
+      // 計算總計
+      let total = 0;
+
+      cart.forEach(item => {
+        const row = document.createElement('tr');
+        row.setAttribute('bgcolor', '#FFF0F5');
+        row.setAttribute('align', 'center');
+
+        // 品項
+        const nameCell = document.createElement('td');
+        nameCell.textContent = item.name;
+        row.appendChild(nameCell);
+
+        // 圖片
+        const imageCell = document.createElement('td');
+        const img = document.createElement('img');
+        img.src = item.imageSrc;
+        img.width = 100;
+        img.height = 100;
+        imageCell.appendChild(img);
+        row.appendChild(imageCell);
+
+        // 數量
+        const quantityCell = document.createElement('td');
+        quantityCell.textContent = item.quantity;
+        row.appendChild(quantityCell);
+
+        // 單價
+        const priceCell = document.createElement('td');
+        priceCell.textContent = formatCurrency(item.price);
+        row.appendChild(priceCell);
+
+        // 小計
+        const subtotal = item.price * item.quantity;
+        const subtotalCell = document.createElement('td');
+        subtotalCell.textContent = formatCurrency(subtotal);
+        row.appendChild(subtotalCell);
+
+        tbody.appendChild(row);
+        total += subtotal;
+      });
+
+      // 總計列
+      const totalRow = document.createElement('tr');
+      totalRow.setAttribute('bgcolor', '#c99fa0');
+      totalRow.setAttribute('align', 'center');
+
+      const totalLabelCell = document.createElement('td');
+      totalLabelCell.setAttribute('colspan', '4');
+      totalLabelCell.setAttribute('align', 'right');
+      totalLabelCell.innerHTML = '<strong>總計:</strong>';
+      totalRow.appendChild(totalLabelCell);
+
+      const totalValueCell = document.createElement('td');
+      totalValueCell.innerHTML = `<strong>${formatCurrency(total)}</strong>`;
+      totalRow.appendChild(totalValueCell);
+
+      tbody.appendChild(totalRow);
+    });
+  </script>
+</head>
+<body class="bodybg">
+  <center>
+    <h2 style="margin-top: 20px; color: #800000;">購物明細</h2>
+    <table class="product-table" border="4" bordercolor="#DDDDDD" bgcolor="white" width="80%" height="80%">
+      <tbody></tbody>
+    </table>
+  </center>
+</body>
+</html>
